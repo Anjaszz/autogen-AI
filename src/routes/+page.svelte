@@ -7,8 +7,9 @@
     } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs";
     import Highlight from "svelte-highlight";
     import latex from "svelte-highlight/languages/latex";
+  
 
-    const API_URL = 'https://api-autogen.vercel.app';
+    const API_URL = "https://api-autogen-o3ow.vercel.app";
     let message = "";
     let result = "";
     let style = "APA Style";
