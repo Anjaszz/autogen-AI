@@ -7,9 +7,9 @@
     } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs";
     import Highlight from "svelte-highlight";
     import latex from "svelte-highlight/languages/latex";
-  
+    import { PUBLIC_API_URL } from "$env/static/public";
 
-    const API_URL = "https://api-autogen-o3ow.vercel.app";
+    const API_URL = PUBLIC_API_URL;
     let message = "";
     let result = "";
     let style = "APA Style";
@@ -23,10 +23,12 @@
         //fetch stream response
         const response = await fetch(url, {
             method: "POST",
+             
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
+            
         });
 
         if(response.body === null) {
@@ -213,25 +215,27 @@
 </script>
 
 <svelte:head>
-    <title>Auto generate makalah</title>
+    <title>Makalah AI</title>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
     />
 
 </svelte:head>
+ <nav class="flex items-center justify-between mb-4 bg-blue-300 p-4" style="height:100px;">
+        <div class="flex items-center">
+            <img src="https://i.ibb.co.com/tDz92xF/ea3a8071-1a40-4b42-b087-299335f0f91e-removebg-preview.png" alt="Logo" class="h-12 w-12 mr-3">
+            <h1 class="text-2xl font-bold text-red-500">Makalah AI</h1>
+        </div>
+        <div>
+            <!-- Add other navigation items here if needed -->
+        </div>
+        </nav>
 <div>
     <div class="my-2 px-6 py-4">
-    <nav class="flex items-center justify-between mb-4 ">
-            <h1 class="text-2xl font-bold">
-                Autogen
-            </h1>
-            <div>
-                <!-- Tambahkan ikon media sosial disini -->
-            </div>
-        </nav>
+   
         <h1 class="text-2xl font-bold text-center">
-            Auto Generate 🤖✍️
+            Auto Generate Makalah🤖✍️
         </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div class="w-full py-2">
