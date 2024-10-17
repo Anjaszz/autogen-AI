@@ -215,17 +215,17 @@
 </script>
 
 <svelte:head>
-    <title>Makalah AI</title>
+    <title>GenMakalah AI</title>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
     />
 
 </svelte:head>
- <nav class="flex items-center justify-between mb-4 bg-blue-300 p-4" style="height:100px;">
+ <nav class="flex items-center justify-between mb-4 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white p-4" style="height:100px;">
         <div class="flex items-center">
             <img src="https://i.ibb.co.com/tDz92xF/ea3a8071-1a40-4b42-b087-299335f0f91e-removebg-preview.png" alt="Logo" class="h-12 w-12 mr-3">
-            <h1 class="text-2xl font-bold text-red-500">Makalah AI</h1>
+            <h1 class="text-2xl font-bold ">GenMakalah AI</h1>
         </div>
         <div>
             <!-- Add other navigation items here if needed -->
@@ -268,7 +268,7 @@
                             id="message"
                             bind:value={message}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Topik Teknologi, Kesehatan, Pendidikan, dll"
+                            placeholder="Contoh: Teknologi Terkini, Inovasi Kesehatan, Tren Pendidikan, dsb."
                             required
                         />
                     </div>
@@ -293,41 +293,40 @@
                     <Highlight language={latex} code={result} />
                 </div>
             </div>
-            <div class="w-full overflow-auto py-2 ">
-                <label
-                    for="countries"
-                    class="block my-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >Result</label
-                >
+            <div class="w-full overflow-auto py-2">
+                <div class="flex justify-center">  <!-- Flexbox untuk memusatkan label -->
+                    <label
+                        for="countries"
+                        class="block my-2 text-2xl font-bold font-mono text-gray-900 dark:text-white"
+                    >
+                        Hasil
+                    </label>
+                </div>
                 <div class="relative" style="height: 78vh;">
                     <iframe
-                    class="w-full"
-                    style="height: 100%;"
-                    id="result"
-                    sandbox="allow-same-origin allow-scripts"
-                    frameborder="0"
-                ></iframe>
-                    
+                        class="w-full"
+                        style="height: 100%;"
+                        id="result"
+                        sandbox="allow-same-origin allow-scripts"
+                        frameborder="0"
+                    ></iframe>
                 </div>
-                
-                
             </div>
+            
         </div>
-        <p class="text-red-500 font-bold">
+        <p class="text-red-500 font-bold text-sm">
             * Semua tulisan/artikel yang dihasilkan di website ini adalah hasil AI, tentunya kualitasnya tidak layak bahkan bisa dibilang "sampah", jadi jangan gunakan hasil dari website ini di lingkungan akademis.
         </p>
-        <p class="text-red-500 font-bold">
+        <p class="text-red-500 font-bold text-sm">
             * Website ini merupakan proof of concept dari penggunaan dan implementasi AI dalam lingkup content generation.
         </p>
-        <p class="text-red-500 font-bold">
-            * Pengembang wesbite tidak bertanggung jawab atas hasil yang dihasilkan oleh AI/Website ini.
-        </p>
     </div>
-      <footer class="bg-blue-300 py-4 ">
+      <footer class="bg-blue-500 py-4 ">
         <div class="container mx-auto">
             <p class="text-center text-black-600 mt-2 font-bold">
-                Created by   <a href="https://anjaszzz.my.id/">Anjaszzz</a>
+                Created by <a href="https://anjaszzz.my.id/" class="text-white hover:text-red-600">Anjaszzz</a>
             </p>
+            
         </div>
     </footer>
 </div>
